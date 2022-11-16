@@ -35,9 +35,3 @@ deploy-job:      # This job runs in the deploy stage.
     - gem install dpl
     - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
     - echo "Application successfully deployed."
-
-heroku_deploy:
-  stage: hml
-  script:
-    - gem install dpl
-    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
