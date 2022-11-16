@@ -1,0 +1,22 @@
+server:
+  port: 3000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/adivinha
+    username: postgres
+    password: sysadm
+  jpa:
+    hibernate:
+      #habilita que todas as atualizações de tabela reflitam no banco
+      ddl-auto: update
+      #dialect: org.hibernate.dialect.PostgreSQLDialect
+      #desabilitar consulta a metadados
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
+  data:
+    rest:
+      defaultMediaType : application/json
